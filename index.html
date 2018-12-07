@@ -16,6 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
+	<!-- Ajax -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- CSS Files -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="assets/css/material-kit.css" rel="stylesheet" />
@@ -324,7 +326,7 @@
 					</li>
 
 					<li>
-						<a href="#contact">
+						<a href="#contactus">
 							<!-- <i class="material-icons">unarchive</i> -->Contact Us
 						</a>
 					</li>
@@ -334,7 +336,7 @@
 						</a>
 					</li> -->
 					<li>
-						<a href="mailto:tedxgwh2017@gmail.com" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+						<a href="mailto:memory-square@gmail.com" target="_blank" class="btn btn-simple btn-white btn-just-icon">
 							<i class="fa fa-envelope"></i>
 						</a>
 					</li>
@@ -360,10 +362,10 @@
 									<br>when you aren't watching"</i>
 							</h4>
 							<br />
-							<form>
+							<form action="" method="post" id="maillist">
 								<div class="form-group label-floating">
 									<label class="control-label">Your Email</label>
-									<input type="email" class="form-control" name="cf_email" id="cf_email">
+									<input type="email" class="form-control" name="sub_email" id="maillist_email">
 								</div>
 								<input class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe" />
 								<br>
@@ -542,15 +544,15 @@
 
 															<div class="form-group label-floating" style="text-align: left">
 																<label class="control-label">Role you're interested in</label>
-																<select name="role" class="form-control">
+																<select name="cf_role" id="cf_role" class="form-control">
 																	<option disabled selected value></option>
-																	<option value="volvo">Volvo</option>
-																	<option value="saab">Saab</option>
-																	<option value="fiat">Fiat</option>
-																	<option value="audi">Audi</option>
+																	<option value="mlintern">Machine Learning Intern</option>
+																	<option value="webdev">Web Developer</option>
+																	<option value="hardware">Hardware Engineer</option>
+																	<option value="smarthome">Smart Home Engineer</option>
 																</select>
 															</div>
-															
+
 															<div class="form-group label-floating" style="text-align: left">
 																<label class="control-label">Your Message</label>
 																<textarea class="form-control" rows="4" name="cf_message" id="cf_message"></textarea>
@@ -558,13 +560,30 @@
 
 															<div class="row">
 																<div class="col-md-4 col-md-offset-4 text-center">
-																	<button class="btn btn-primary btn-raised">
+																	<button onclick="success()" class="btn btn-primary btn-raised">
 																		Send Message
 																	</button>
 																</div>
 															</div>
 														</form>
+														<div id="success">
+															Success!
+														</div>
 													</div>
+
+													<script>
+													function success() {
+													var x = document.getElementById("success");
+													x.style.display="block";
+
+													/*if (x.style.display === "none") {
+							        			x.style.display = "block";
+							    				}
+													else {
+							        		x.style.display = "none";
+												} */
+												}
+													</script>
 
 													<!-- <img src="assets/img/trishul.jpg" alt="Thumbnail Image" class="img-raised img-circle" width=180px>
 													<p>
@@ -681,7 +700,7 @@
 										<br />
 										<small class="text-muted">Co-Founder</small>
 									</h4>
-									<p class="description">Proud Intel Isef winner,</p>
+									<p class="description">Proud Intel Isef winner</p>
 									<a href="https://www.linkedin.com/in/kunjdedhia/" class="btn btn-simple btn-just-icon" target=_blank>
 										<i class="fa fa-linkedin"></i>
 									</a>
@@ -763,7 +782,7 @@
 
 
 				<!-- registration form -->
-				<!--	<div class="section landing-section">
+			<!-- 	<div class="section landing-section">
 	                <div class="row">
 	                    <div class="col-md-12 ">
 	                        <h2 class="text-center title" id="register">REGISTER</h2>
@@ -835,44 +854,64 @@
 
 
 				<!-- Contact -->
-				<div class="section landing-section">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h2 class="text-center title" id="contact">CONTACT US</h2>
-							<h4 class="text-center description">Questions/Queries? Want to attend or speak at the event? Feel free to hit us up!</h4>
-							<form class="contact-form" action="" method="post" id="contactform">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Your Name</label>
-											<input type="text" class="form-control" name="cf_name" id="cf_name">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group label-floating">
-											<label class="control-label">Your Email</label>
-											<input type="email" class="form-control" name="cf_email" id="cf_email">
-										</div>
-									</div>
-								</div>
-
+				<<div class="section landing-section">
+							<div class="row">
+									<div class="col-md-8 col-md-offset-2">
+											<h2 class="text-center title" id="contactus">CONTACT US</h2>
+					<h4 class="text-center description">Questions/Queries? Want to attend or speak at the event? Feel free to hit us up!</h4>
+											<form class="form" action="" method="post" id="contactus">
+													<div class="row">
+															<div class="col-md-6">
 								<div class="form-group label-floating">
-									<label class="control-label">Your Message</label>
-									<textarea class="form-control" rows="4" name="cf_message" id="cf_message"></textarea>
+									<label class="control-label">Your Name</label>
+									<input type="text" class="form-control" name="contact_name" id="contact_name">
 								</div>
+															</div>
+															<div class="col-md-6">
+								<div class="form-group label-floating">
+									<label class="control-label">Your Email</label>
+									<input type="email" class="form-control" name="contact_email" id="contact_email">
+								</div>
+															</div>
+													</div>
 
-								<div class="row">
-									<div class="col-md-4 col-md-offset-4 text-center">
-										<button class="btn btn-primary btn-raised">
-											Send Message
-										</button>
-									</div>
-								</div>
-							</form>
+						<div class="form-group label-floating">
+							<label class="control-label">Your Message</label>
+							<textarea class="form-control" rows="4" name="contact_message" id="contact_message"></textarea>
 						</div>
-					</div>
 
-				</div>
+													<div class="row">
+															<div class="col-md-4 col-md-offset-4 text-center">
+																	<button onclick="contact_success()" class="btn btn-primary btn-raised">
+									Send Message
+								</button>
+															</div>
+
+
+													<script>
+													function contact_success() {
+													var y = document.getElementById("contact_success");
+													y.style.display="block";
+
+													/*if (x.style.display === "none") {
+														x.style.display = "block";
+													}
+													else {
+													x.style.display = "none";
+												} */
+												}
+													</script>
+
+
+											</form>
+
+									</div>
+									<center><div id="contact_success">
+										Success!
+									</div></center>
+							</div>
+
+					</div>
 			</div>
 
 		</div>
@@ -918,82 +957,125 @@
 <script src="assets/js/material-kit.js" type="text/javascript"></script>
 
 <script>
-	$(document).ready(function () {
-		$("#regform").submit(function () {
-			var name = $("#reg_name").val();
-			var email = $("#reg_email").val();
-			var phone = $("#reg_phone").val();
-			var school = $("#reg_school").val();
-			if (name.length < 3) {
-				alert("Enter Name");
-			}
-			else if (email.length < 3) {
-				alert("Enter Email");
-			}
-			else if (phone.length < 3) {
-				alert("Enter Phone");
-			}
-			else if (school.length < 3) {
-				alert("Enter School");
-			}
-			else {
-				$.ajax({
-					url: 'https://script.google.com/macros/s/AKfycbywMH5oWOrDfXrOicg7iLc6cOk9dY71NoEfn-ncxKsspbYmypC0/exec',
-					method: "POST",
-					data: { "name": name, "email": email, "phone": phone, "school": school },
-					success: function (response) {
+$(document).ready(function(){
+	//Succes message for forms
+	var x = document.getElementById("success");
+	x.style.display="none";
 
-						if (response.result == "success") {
-							alert("Registered Successfully!");
-						}
-						else {
-							alert("Failed to register! Please try again!");
-						}
+	var y = document.getElementById("contact_success");
+	y.style.display="none"
 
-					},
-					error: function (response) {
-						alert("Error Occured! Please try again!");
+	$("#contactus").submit(function(){
+		var name=$("#contact_name").val();
+		var email=$("#contact_email").val();
+		var message=$("#contact_message").val();
+		if(name.length<3){
+			alert("Enter Name");
+		}
+		else if(email.length<3){
+			alert("Enter Email");
+		}
+		else if(message.length<3){
+			alert("Enter Message");
+		}
+
+		else{
+			$.ajax({
+				url: 'https://script.google.com/macros/s/AKfycbxHo2hSYeVTLCVgMU-7ZCNU8mq17Ce6cIKxBtC-FA/exec',
+				method: "POST",
+				data: {"name":name,"email":email,"message":message},
+				success:function(response){
+
+					if(response.result=="success"){
+
 					}
-				});
-			}
-			return false;
-		});
-		$("#contactform").submit(function () {
-			var name = $("#cf_name").val();
-			var email = $("#cf_email").val();
-			var message = $("#cf_message").val();
-			if (name.length < 3) {
-				alert("Enter Name");
-			}
-			else if (email.length < 3) {
-				alert("Enter Email");
-			}
-			else if (message.length < 3) {
-				alert("Enter Message");
-			}
-			else {
-				$.ajax({
-					url: 'https://script.google.com/macros/s/AKfycbylAt9u6KMyxq6t1R09KsG4eFix8g2gW3W3Ay1MNa-rctcCmmQ/exec',
-					method: "POST",
-					data: { "name": name, "email": email, "message": message },
-					success: function (response) {
-
-						if (response.result == "success") {
-							alert("Message Sent Successfully!");
-						}
-						else {
-							alert("Failed to send message! Please try again!");
-						}
-
-					},
-					error: function (response) {
-						alert("Error Occured! Please try again!");
+					else{
+						alert("Failed to register! Please try again!");
 					}
-				});
-			}
-			return false;
-		});
+
+				},
+				error:function(response){
+					alert("Error Occured! Please try again!");
+				}
+			});
+		}
+		return false;
 	});
+	$("#contactform").submit(function(){
+
+
+		var name=$("#cf_name").val();
+		var email=$("#cf_email").val();
+		var message=$("#cf_message").val();
+		var role = document.getElementById("cf_role").value;
+
+		if(name.length<3){
+			alert("Enter Name");
+		}
+		else if(email.length<3){
+			alert("Enter Email");
+		}
+		else if(message.length<3){
+			alert("Enter Message");
+		}
+		else{
+			$.ajax({
+				url: 'https://script.google.com/macros/s/AKfycbycPXTgHtTR7wU_3DjPMfLyzsrB54IFUEK5K3noFw/exec',
+				method: "POST",
+				data: {"name":name,"email":email,"message":message, "role":role},
+				success:function(response){
+
+					if(response.result=="success"){
+
+						x.style.display="block";
+
+					}
+					else{
+						alert("Failed to send message! Please try again!");
+					}
+
+				},
+				error:function(response){
+					alert("Error Occured! Please try again!");
+				}
+			});
+		}
+		return false;
+	});
+
+	$("#maillist").submit(function(){
+
+		var email=$("#maillist_email").val();
+
+		if(email.length<3){
+			alert("Enter Email");
+		}
+		else{
+			$.ajax({
+				url: 'https://script.google.com/macros/s/AKfycbwNP79_dkUCiPcHUFoVslR9VcTiCkaYCjc4-vm5/exec',
+				method: "POST",
+				data: {"email":email},
+				success:function(response){
+
+					if(response.result=="success"){
+
+
+
+					}
+					else{
+						alert("Failed to send message! Please try again!");
+					}
+
+				},
+				error:function(response){
+					alert("Error Occured! Please try again!");
+				}
+			});
+		}
+		return false;
+	});
+});
 </script>
+
 
 </html>
