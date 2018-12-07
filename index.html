@@ -357,12 +357,16 @@
 						<p>
 							<h4>
 								<i>"Haing an eye watch for you,
-									<br> when you aren't watching"</i>
+									<br>when you aren't watching"</i>
 							</h4>
 							<br />
 							<form>
-								<input class="form-control" type="text" name="email" placeholder="Enter your email to receive updates"/>
-								<input class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe"/> <br>
+								<div class="form-group label-floating">
+									<label class="control-label">Your Email</label>
+									<input type="email" class="form-control" name="cf_email" id="cf_email">
+								</div>
+								<input class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe" />
+								<br>
 								<small id="emailHelp" class="form-text text-muted" style="color: #fff">We'll never share your email with anyone else.</small>
 							</form>
 							<!-- <a href="#register" class="btn btn-danger btn-raised btn-lg">
@@ -387,7 +391,7 @@
 					<!-- experimental tabs -->
 					<p>
 						<div class="row">
-							<div class="col-md-6 col-md-offset-3">
+							<div class="col-md-10 col-md-offset-1">
 								<div class="profile-tabs">
 									<div class="nav-align-center">
 										<ul class="nav nav-pills" role="tablist">
@@ -455,8 +459,6 @@
 													<style>
 													</style>
 
-
-
 													<div class="timeline-timeline">
 														<div class="timeline-container timeline-left">
 															<div class="timeline-content">
@@ -514,24 +516,57 @@
 														</div>
 													</div>
 
-
-
-
-
-
-
 												</div>
 											</div>
 											<div class="tab-pane text-center" id="shows">
 
-
-
-
 												<div class="row">
 
+													<div class="col-md-8 col-md-offset-2">
+														<h3 class="text-center title" id="contact">Interested in working with us?</h2>
+														<form class="contact-form" action="" method="post" id="contactform">
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group label-floating" style="text-align: left">
+																		<label class="control-label">Your Name</label>
+																		<input type="text" class="form-control" name="cf_name" id="cf_name">
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="form-group label-floating" style="text-align: left">
+																		<label class="control-label">Your Email</label>
+																		<input type="email" class="form-control" name="cf_email" id="cf_email">
+																	</div>
+																</div>
+															</div>
 
+															<div class="form-group label-floating" style="text-align: left">
+																<label class="control-label">Role you're interested in</label>
+																<select name="role" class="form-control">
+																	<option disabled selected value></option>
+																	<option value="volvo">Volvo</option>
+																	<option value="saab">Saab</option>
+																	<option value="fiat">Fiat</option>
+																	<option value="audi">Audi</option>
+																</select>
+															</div>
+															
+															<div class="form-group label-floating" style="text-align: left">
+																<label class="control-label">Your Message</label>
+																<textarea class="form-control" rows="4" name="cf_message" id="cf_message"></textarea>
+															</div>
 
-													<img src="assets/img/trishul.jpg" alt="Thumbnail Image" class="img-raised img-circle" width=180px>
+															<div class="row">
+																<div class="col-md-4 col-md-offset-4 text-center">
+																	<button class="btn btn-primary btn-raised">
+																		Send Message
+																	</button>
+																</div>
+															</div>
+														</form>
+													</div>
+
+													<!-- <img src="assets/img/trishul.jpg" alt="Thumbnail Image" class="img-raised img-circle" width=180px>
 													<p>
 														<h4 class="title"> Trishul Raja</h4>
 														<h6>Even Manager, Co-Organizer</h6>
@@ -565,7 +600,7 @@
 																					<p class="description">Rohan Shankar is an aspiring high-school senior from Greenwood High International School, Bangalore.
 																						An avid interest in debate and public speaking drew him towards the TEDx platform. His favorite TED
 																						talk is "How to escape education's death valley" by Sir Ken Robinson. Some of his other interests include
-																						reading sci-fi thrillers, playing the tabla and guitar, and engaging in social-service activities.
+																						reading sci-fi thrillers, playing the tabla and guitar, and engaging in social-service activities. -->
 
 
 
@@ -856,7 +891,7 @@
 					</ul>
 				</nav>
 				<div class="copyright pull-right">
-					&copy; 2017, made with
+					&copy; 2018, made with
 					<i class="fa fa-heart heart"></i> by
 					<a href="" target="_blank">Team MemorySquare</a>
 				</div>
