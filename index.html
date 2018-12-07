@@ -18,6 +18,7 @@
 	<!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
+
 	<style>
 	.card-signup *{
 		color:#fff !important;
@@ -100,6 +101,20 @@
 	    z-index: 1;
 	}
 
+	.timeline-done::after {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		right: -12px;
+		background-color: #fc5441;
+		border: 4px solid #fc5441;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+
+	}
+
 	/* Place the container to the left */
 	.timeline-left {
 	    left: 0;
@@ -121,7 +136,7 @@
 	    right: 30px;
 	    border: medium solid white;
 	    border-width: 10px 0 10px 10px;
-	    border-color: transparent transparent transparent grey;
+	    border-color: transparent transparent transparent #dedede;
 	}
 
 	/* Add arrows to the right container (pointing left) */
@@ -133,9 +148,9 @@
 	    width: 0;
 	    z-index: 1;
 	    left: 30px;
-	    border: medium solid white;
+	    border: medium solid grey;
 	    border-width: 10px 10px 10px 0;
-	    border-color: transparent grey transparent transparent;
+	    border-color: transparent #dedede transparent transparent;
 	}
 
 	/* Fix the circle for containers on the right side */
@@ -146,7 +161,7 @@
 	/* The actual content */
 	.timeline-content {
 	    padding: 20px 30px;
-	    background-color: grey;
+	    background-color:#dedede;
 	    position: relative;
 	    border-radius: 6px;
 	}
@@ -187,6 +202,65 @@
 	    left: 0%;
 	  }
 	}
+
+	/* ParticlesJS */
+	canvas{
+	  display:block;
+	  vertical-align:bottom;
+	}
+
+
+	/* ---- stats.js ---- */
+
+	.count-particles{
+	  background: #000022;
+	  position: absolute;
+	  top: 48px;
+	  left: 0;
+	  width: 80px;
+	  color: #13E8E9;
+	  font-size: .8em;
+	  text-align: left;
+	  text-indent: 4px;
+	  line-height: 14px;
+	  padding-bottom: 2px;
+	  font-family: Helvetica, Arial, sans-serif;
+	  font-weight: bold;
+	}
+
+	.js-count-particles{
+	  font-size: 1.1em;
+	}
+
+	#stats,
+	.count-particles{
+	  -webkit-user-select: none;
+	  margin-top: 5px;
+	  margin-left: 5px;
+	}
+
+	#stats{
+	  border-radius: 3px 3px 0 0;
+	  overflow: hidden;
+	}
+
+	.count-particles{
+	  border-radius: 0 0 3px 3px;
+	}
+
+
+	/* ---- particles.js container ---- */
+
+	#particles-js{
+	  width: 100%;
+	  height: 100%;
+	  background-color: #b61924;
+	  background-image: url('');
+	  background-size: cover;
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+	}
+
 	</style>
 
 </head>
@@ -242,6 +316,8 @@
     <div class="wrapper">
 
 				<!-- Particles.js -->
+
+
         <div class="header header-filter" style="background-image: url('assets/img/landing7.jpg');">
             <div class="container">
                 <div class="row">
@@ -693,6 +769,8 @@
 </body>
 
 	<!--   Core JS Files   -->
+
+
 	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/js/material.min.js"></script>
