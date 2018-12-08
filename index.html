@@ -3,6 +3,20 @@
 <html lang="en">
 
 <head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65875130-3"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-65875130-3');
+	</script>
+
+
+
+
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
 	<link rel="icon" type="image/png" href="/assets/img/favicon.png">
@@ -595,18 +609,18 @@ With just a M
 																	<label class="control-label">Why do you want to join us?</label>
 																	<textarea class="form-control" rows="4" name="cf_message" id="cf_message"></textarea>
 																</div>
-
+																<form action="uploads.php" method="post" enctype="multipart/form-data">
 																<div class="label-floating" style="text-align: left">
 																	<br>
 																		<label>Upload a resume</label>
-																		<input type="file" name="pic" accept=".pdf">
+																		<input type="file" name="upload" accept="application/pdf" />
 																		<br>
-																	</div>
+																	</div> </form>
 
 																<div class="row">
 																	<div class="col-md-4 col-md-offset-4 text-center">
 																		<button onclick="success()" class="btn btn-primary btn-raised">
-																			Send Message
+																			Apply
 																		</button>
 																	</div>
 																</div>
@@ -905,12 +919,7 @@ With just a M
 										function contact_success() {
 											var y = document.getElementById("contact_success");
 											y.style.display = "block";
-											/*if (x.style.display === "none") {
-												x.style.display = "block";
-											}
-											else {
-											x.style.display = "none";
-										} */
+
 										}
 									</script>
 
