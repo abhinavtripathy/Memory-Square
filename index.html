@@ -344,18 +344,24 @@
 								<i>"Having an eye watch for you, when you aren't watching"</i>
 							</h4>
 							<br />
-							<form action="" method="post" id="maillist">
+							<form  action="" method="post" id="maillist">
 								<div class="form-group label-floating">
 									<label class="control-label">Enter your email to receive updates</label>
 									<input type="email" class="form-control" name="sub_email" id="maillist_email">
 								</div>
-								<input class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe" />
+								<input onclick="sent()" class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe" />
 								<br>
 								<small id="emailHelp" class="form-text text-muted" style="color: #fff">We'll never share your email with anyone else.</small>
 							</form>
 							<!-- <a href="#register" class="btn btn-danger btn-raised btn-lg">
 								</i> Subscribe
 							</a> -->
+							<script>
+							function sent() {
+  						alert("Success!");
+							}
+
+							</script>
 					</div>
 				</div>
 			</div>
@@ -866,7 +872,7 @@ With just a M
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<h2 class="text-center title" id="contactus">CONTACT US</h2>
-							<h4 class="text-center description">Questions/Queries? Want to attend or speak at the event? Feel free to hit us up!</h4>
+							<h4 class="text-center description">Questions/Queries? Feel free to hit us up!</h4>
 							<form class="form" action="" method="post" id="contactus">
 								<div class="row">
 									<div class="col-md-6">
@@ -973,6 +979,7 @@ With just a M
 		x.style.display = "none";
 		var y = document.getElementById("contact_success");
 		y.style.display = "none"
+
 		$("#contactus").submit(function () {
 			var name = $("#contact_name").val();
 			var email = $("#contact_email").val();
