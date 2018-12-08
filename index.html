@@ -1,4 +1,5 @@
-<!doctype html>
+
+
 <html lang="en">
 
 <head>
@@ -22,73 +23,54 @@
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="assets/css/material-kit.css" rel="stylesheet" />
 
+
 	<style>
-		html {
-			scroll-behavior: smooth;
-		}
 		.card-signup * {
 			color: #fff !important;
 		}
-
 		::-webkit-input-placeholder {
 			/* Chrome/Opera/Safari */
 			color: #fff !important;
 		}
-
 		::-moz-placeholder {
 			/* Firefox 19+ */
 			color: #fff !important;
 		}
-
 		:-ms-input-placeholder {
 			/* IE 10+ */
 			color: #fff !important;
 		}
-
 		:-moz-placeholder {
 			/* Firefox 18- */
 			color: #fff !important;
 		}
-
 		input::placeholder {
 			color: #fff !important;
 		}
-
 		/* label underline focus color */
-
 		.input-field input[type=text]:focus {
 			border-bottom: 1px solid #fff;
 			box-shadow: 0 1px 0 0 #fff;
 		}
-
 		.btn-white {
 			color: #F57768 !important;
 		}
-
 		.navbar-nav * {
 			color: #fff;
 		}
-
 		@media screen and (max-width:600px) {
 			#gmap_layer,
 			#gmap_canvas {
 				width: 100% !important;
 			}
 		}
-
-
-
 		/* The actual timeline (the vertical ruler) */
-
 		.timeline-timeline {
 			position: relative;
 			max-width: 1200px;
 			margin: 0 auto;
-
 		}
-
 		/* The actual timeline (the vertical ruler) */
-
 		.timeline-timeline::after {
 			content: '';
 			position: absolute;
@@ -99,9 +81,7 @@
 			left: 50%;
 			margin-left: -3px;
 		}
-
 		/* Container around content */
-
 		.timeline-container {
 			padding: 10px 40px;
 			position: relative;
@@ -109,9 +89,7 @@
 			width: 50%;
 			box-sizing: border-box;
 		}
-
 		/* The circles on the timeline */
-
 		.timeline-container::after {
 			content: '';
 			position: absolute;
@@ -124,7 +102,6 @@
 			border-radius: 50%;
 			z-index: 1;
 		}
-
 		.timeline-done::after {
 			content: '';
 			position: absolute;
@@ -136,23 +113,16 @@
 			top: 15px;
 			border-radius: 50%;
 			z-index: 1;
-
 		}
-
 		/* Place the container to the left */
-
 		.timeline-left {
 			left: 0;
 		}
-
 		/* Place the container to the right */
-
 		.timeline-right {
 			left: 50%;
 		}
-
 		/* Add arrows to the left container (pointing right) */
-
 		.timeline-left::before {
 			content: " ";
 			height: 0;
@@ -165,9 +135,7 @@
 			border-width: 10px 0 10px 10px;
 			border-color: transparent transparent transparent #dedede;
 		}
-
 		/* Add arrows to the right container (pointing left) */
-
 		.timeline-right::before {
 			content: " ";
 			height: 0;
@@ -180,40 +148,30 @@
 			border-width: 10px 10px 10px 0;
 			border-color: transparent #dedede transparent transparent;
 		}
-
 		/* Fix the circle for containers on the right side */
-
 		.timeline-right::after {
 			left: -12px;
 		}
-
 		/* The actual content */
-
 		.timeline-content {
 			padding: 20px 30px;
 			background-color: #dedede;
 			position: relative;
 			border-radius: 6px;
 		}
-
-
 		/*
 		/* Media queries - Responsive timeline on screens less than 600px wide*/
-
 		@media screen and (max-width: 600px) {
 			/* Place the timelime to the left */
 			.timeline-timeline::after {
 				left: 31px;
 			}
-
-
 			/* Full-width containers */
 			.timeline-container {
 				width: 100%;
 				padding-left: 70px;
 				padding-right: 25px;
 			}
-
 			/* Make sure that all arrows are pointing leftwards */
 			.timeline-container::before {
 				left: 60px;
@@ -221,29 +179,22 @@
 				border-width: 10px 10px 10px 0;
 				border-color: transparent white transparent transparent;
 			}
-
 			/* Make sure all circles are at the same spot */
 			.timeline-left::after,
 			.timeline-right::after {
 				left: 15px;
 			}
-
 			/* Make all right containers behave like the left ones */
 			.timeline-right {
 				left: 0%;
 			}
 		}
-
 		/* ParticlesJS */
-
 		canvas {
 			display: block;
 			vertical-align: bottom;
 		}
-
-
 		/* ---- stats.js ---- */
-
 		.count-particles {
 			background: #000022;
 			position: absolute;
@@ -259,30 +210,23 @@
 			font-family: Helvetica, Arial, sans-serif;
 			font-weight: bold;
 		}
-
 		.js-count-particles {
 			font-size: 1.1em;
 		}
-
 		#stats,
 		.count-particles {
 			-webkit-user-select: none;
 			margin-top: 5px;
 			margin-left: 5px;
 		}
-
 		#stats {
 			border-radius: 3px 3px 0 0;
 			overflow: hidden;
 		}
-
 		.count-particles {
 			border-radius: 0 0 3px 3px;
 		}
-
-
 		/* ---- particles.js container ---- */
-
 		#particles-js {
 			width: 100%;
 			height: 100%;
@@ -300,7 +244,7 @@
 	<nav class="navbar navbar-transparent navbar-absolute">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
+			<!-- <div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -312,8 +256,7 @@
 						<strong>TED</strong>
 					</font>
 				</a>
-
-			</div>
+			</div> -->
 
 			<div class="collapse navbar-collapse" id="navigation-example">
 				<ul class="nav navbar-nav navbar-right">
@@ -354,7 +297,7 @@
 		<!-- Particles.js -->
 
 
-		<div class="header header-filter" style="background-image: url('assets/img/landing7.jpg');">
+		<div class="header header-filter" style="background-image: url('assets/img/landing4.jpg');">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -366,7 +309,7 @@
 							<br />
 							<form action="" method="post" id="maillist">
 								<div class="form-group label-floating">
-									<label class="control-label">Your Email</label>
+									<label class="control-label">Enter your email to receive updates</label>
 									<input type="email" class="form-control" name="sub_email" id="maillist_email">
 								</div>
 								<input class="btn btn-danger btn-raised btn-lg" type="submit" value="Subscribe" />
@@ -426,32 +369,23 @@
 										<div class="tab-content gallery">
 											<div class="tab-pane active" id="studio">
 												<div class="row">
-													<p>
-														<p class="description">TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California
-															30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences
-															invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then
-															made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert,
-															Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.</p>
-														<p class="description">The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include
-															TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and
-															interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed.
-															TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get
-															help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self-
-															organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators
-															from around the globe to amplify the impact of their remarkable projects and activities. </p>
 
-														<p>
-															<p class="description">TEDx, x = independently organized event.</p>
-															<p class="description">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people
-																together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark
-																deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently
-																organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx
-																events are self-organized. (Subject to certain rules and regulations.)TED </p>
+													<p class="description">How many time has it been that you enter your room, leave your phone, car keys and wallet on a table and 30
+														minutes later you don’t know where these essentials are? </p>
 
+													<p class="description">The mission of MemorySquare is to ‘Have an eye watch for you, when you aren’t watching’. We’re not here to simply
+														connect people to objects, but people to people. At MemorySquare we envision a world where people feel secure,
+														efficient and empowered. </p>
 
+													<p class="description">With just a M
+														<sup>2</sup> Camera installed in every room of your house, our application tracks and keeps a record of your essentials.
+														It helps you find them, when you cannot. MemorySquare acts as a memory bank that stores all the events at a
+														home. It logs every event that took place, be it a mail delivery too. And the applications don’t end here;
+														it can detect thefts, intrusions or unexpected activity and alert the user in real-time.</p>
 
-
-
+													<p class="description">It is hard to fathom how important time is during such events. Memory Square simplifies and streamlines the
+														process designed for the absolute ease of the user. We organize your home’s information readily available for
+														you to access.</p>
 
 												</div>
 											</div>
@@ -527,7 +461,7 @@
 												<div class="row">
 
 													<div class="col-md-8 col-md-offset-2">
-														<h3 class="text-center title" id="contact">Interested in working with us?</h2>
+														<h3 class="text-center title" id="contact">We're Hiring</h2>
 															<form class="contact-form" action="" method="post" id="contactform">
 																<div class="row">
 																	<div class="col-md-6">
@@ -556,9 +490,16 @@
 																</div>
 
 																<div class="form-group label-floating" style="text-align: left">
-																	<label class="control-label">Your Message</label>
+																	<label class="control-label">Why do you want to join us?</label>
 																	<textarea class="form-control" rows="4" name="cf_message" id="cf_message"></textarea>
 																</div>
+
+																<div class="label-floating" style="text-align: left">
+																	<br>
+																		<label>Upload a resume</label>
+																		<input type="file" name="pic" accept=".pdf">
+																		<br>
+																	</div>
 
 																<div class="row">
 																	<div class="col-md-4 col-md-offset-4 text-center">
@@ -577,10 +518,9 @@
 														function success() {
 															var x = document.getElementById("success");
 															x.style.display = "block";
-
 															/*if (x.style.display === "none") {
 														x.style.display = "block";
-													}
+														}
 															else {
 													x.style.display = "none";
 														} */
@@ -591,33 +531,25 @@
 													<p>
 														<h4 class="title"> Trishul Raja</h4>
 														<h6>Even Manager, Co-Organizer</h6>
-
 														<p class="description">An avid reader and cinephile, Trishul is dedicated to social service and teaching. As a voluntary teacher for
 															4 years at an underprivileged orphanage, he knows the value of passing on knowledge and the importance of
 															motivation, leading him to organize the TEDx conference. </p>
-
 														<p>
 															<p>
-
-
 																<img src="assets/img/vedaant.jpg" alt="Thumbnail Image" class="img-raised img-circle" width=180px>
 																<p>
 																	<h4 class="title"> Vedaant Jain</h4>
 																	<h6> Executive Producer, Co-Organizer</h6>
-
 																	<p class="description">An aspiring Investment Banker, Vedaant is a high school senior at Greenwood High International School. His
 																		interests vary from trading in the stock market to playing sports like Cricket and Squash regularly. Being
 																		a part of the student council and an avid follower of TED talks lead him to co-organise the event for his
 																		school.
-
 																		<p>
 																			<p>
-
 																				<img src="assets/img/rohan.jpg" alt="Thumbnail Image" class="img-raised img-circle" width=180px>
 																				<p>
 																					<h4 class="title"> Rohan Shankar</h4>
 																					<h6>Sponsorship and Budget Manager, Co-Organizer</h6>
-
 																					<p class="description">Rohan Shankar is an aspiring high-school senior from Greenwood High International School, Bangalore.
 																						An avid interest in debate and public speaking drew him towards the TEDx platform. His favorite TED
 																						talk is "How to escape education's death valley" by Sir Ken Robinson. Some of his other interests include
@@ -651,7 +583,6 @@
    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 </div>
 <script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(12.899894500000054,77.75184935895997),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.899894500000054,77.75184935895997)});infowindow = new google.maps.InfoWindow({content:'<strong>Greenwood High International School</strong><br>No.8-14, Chikkawadayarapura, Near Heggondahalli, Gunjur Post, Varthur Sarjapur Road Hegondanahalli Bengaluru, Karnataka 560087<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-
 </center>
 -->
 
@@ -743,7 +674,6 @@
 									<a href="" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
 			                    </div>
 			                </div>
-
 <div class="col-md-2"></div>
 <div class="col-md-4">
 			                    <div class="team-player">
@@ -756,7 +686,6 @@
 									<a href="" class="btn btn-simple btn-just-icon"><i class="fa fa-linkedin"></i></a>
 			                    </div>
 			                </div>
-
 		<div class="col-md-4">
 			                    <div class="team-player">
 			                        <img src="assets/img/astro.jpg" alt="Thumbnail Image" class="img-raised img-circle">
@@ -789,25 +718,18 @@
 	                    <div class="col-md-12 ">
 	                        <h2 class="text-center title" id="register">REGISTER</h2>
 		<h4 class="text-center description">The event is open to high school students only.</h4>
-
-
-
 		<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
 						<div class="card card-signup">
 							<form class="form" method="post" action="" id="regform">
-
-
 								<div class="content">
-
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">face</i>
 										</span>
 										<input type="text" class="form-control" placeholder="Your Name" id="reg_name">
 									</div>
-
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
@@ -826,10 +748,6 @@
 										</span>
 										<input type="text" class="form-control" placeholder="Your School" id="reg_school">
 									</div>
-
-
-
-
 								</div>
 								<div class="footer text-center">
 									<button class="btn btn-white btn-lg" type="submit">Register</button>
@@ -838,17 +756,9 @@
 						</div>
 					</div>
 				</div>
-
-
-
-
-
-
 	                </div>
-
 	            </div>
 	        </div>
-
 		</div>
 -->
 
@@ -894,7 +804,12 @@
 										function contact_success() {
 											var y = document.getElementById("contact_success");
 											y.style.display = "block";
-
+											/*if (x.style.display === "none") {
+												x.style.display = "block";
+											}
+											else {
+											x.style.display = "none";
+										} */
 										}
 									</script>
 
@@ -913,30 +828,30 @@
 				</div>
 
 			</div>
-
-
-			<footer class="footer">
-				<div class="container">
-					<nav class="pull-left">
-						<ul>
-
-							<li>
-								<a href="credit.html" target="_blank">
-									Image Credit
-								</a>
-							</li>
-
-						</ul>
-					</nav>
-					<div class="copyright pull-right">
-						&copy; 2018, made with
-						<i class="fa fa-heart heart"></i> by
-						<a href="" target="_blank">Team MemorySquare</a>
-					</div>
-				</div>
-			</footer>
-
 		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<nav class="pull-left">
+					<ul>
+
+						<li>
+							<a href="credit.html" target="_blank">
+								Image Credit
+							</a>
+						</li>
+
+					</ul>
+				</nav>
+				<div class="copyright pull-right">
+					&copy; 2018, made with
+					<i class="fa fa-heart heart"></i> by
+					<a href="" target="_blank">Team MemorySquare</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
 </body>
 
 <!--   Core JS Files   -->
@@ -960,10 +875,8 @@
 		//Succes message for forms
 		var x = document.getElementById("success");
 		x.style.display = "none";
-
 		var y = document.getElementById("contact_success");
 		y.style.display = "none"
-
 		$("#contactus").submit(function () {
 			var name = $("#contact_name").val();
 			var email = $("#contact_email").val();
@@ -977,21 +890,17 @@
 			else if (message.length < 3) {
 				alert("Enter Message");
 			}
-
 			else {
 				$.ajax({
 					url: 'https://script.google.com/macros/s/AKfycbxHo2hSYeVTLCVgMU-7ZCNU8mq17Ce6cIKxBtC-FA/exec',
 					method: "POST",
 					data: { "name": name, "email": email, "message": message },
 					success: function (response) {
-
 						if (response.result == "success") {
-
 						}
 						else {
 							alert("Failed to register! Please try again!");
 						}
-
 					},
 					error: function (response) {
 						alert("Error Occured! Please try again!");
@@ -1001,13 +910,10 @@
 			return false;
 		});
 		$("#contactform").submit(function () {
-
-
 			var name = $("#cf_name").val();
 			var email = $("#cf_email").val();
 			var message = $("#cf_message").val();
 			var role = document.getElementById("cf_role").value;
-
 			if (name.length < 3) {
 				alert("Enter Name");
 			}
@@ -1023,16 +929,12 @@
 					method: "POST",
 					data: { "name": name, "email": email, "message": message, "role": role },
 					success: function (response) {
-
 						if (response.result == "success") {
-
 							x.style.display = "block";
-
 						}
 						else {
 							alert("Failed to send message! Please try again!");
 						}
-
 					},
 					error: function (response) {
 						alert("Error Occured! Please try again!");
@@ -1041,11 +943,8 @@
 			}
 			return false;
 		});
-
 		$("#maillist").submit(function () {
-
 			var email = $("#maillist_email").val();
-
 			if (email.length < 3) {
 				alert("Enter Email");
 			}
@@ -1055,16 +954,11 @@
 					method: "POST",
 					data: { "email": email },
 					success: function (response) {
-
 						if (response.result == "success") {
-
-
-
 						}
 						else {
 							alert("Failed to send message! Please try again!");
 						}
-
 					},
 					error: function (response) {
 						alert("Error Occured! Please try again!");
